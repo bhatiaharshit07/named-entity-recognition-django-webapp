@@ -5,8 +5,10 @@ certifi==2020.12.5
 chardet==4.0.0
 click==7.1.2
 cymem==2.0.5
+dj-database-url==0.5.0
 Django==3.1.7
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0-py3-none-any.whl
+gunicorn==20.1.0
 idna==2.10
 Jinja2==2.11.3
 MarkupSafe==1.1.1
@@ -15,6 +17,7 @@ numpy==1.20.2
 packaging==20.9
 pathy==0.4.0
 preshed==3.0.5
+psycopg2==2.8.6
 pydantic==1.7.3
 pyparsing==2.4.7
 pytz==2021.1
@@ -29,3 +32,4 @@ tqdm==4.59.0
 typer==0.3.2
 urllib3==1.26.4
 wasabi==0.8.2
+whitenoise==5.2.0
