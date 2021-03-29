@@ -1,1 +1,1 @@
-web: gunicorn majorproject-423.wsgi --log-file -
+web: gunicorn finalProject.wsgi --log-file -
