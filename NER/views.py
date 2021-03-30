@@ -12,11 +12,7 @@ def result(request):
 
     nlp = spacy.load("en_core_web_sm")
     text = nlp(input_sentence)
-    nerList = []
-    for word in text.ents:
-        print(word.text,word.label_)
-        nerList.append([word.text,word.label_])
-    html = displacy.render([text], style="ent", page=True)
+    html = displacy.render([text], style="ent")
     #return HttpResponse(html[308:-7])
-    return render(request, "result.html", {'ans':text, 'ans2':nerList, 'content':html[344:-25]})
-    
+    #return render(request, "result.html", {'ans':text, 'ans2':nerList, 'content':html[344:-25]})
+    return render(request, "result.html", {'content':html})
