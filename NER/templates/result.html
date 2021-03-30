@@ -18,12 +18,13 @@
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Named entity recognition (NER)</strong> is the task of identifying and categorizing key information (entities) in a text. An entity can be any word or series of words that consistently refers to the same thing. Every detected entity is classified into a predetermined category. For example, an NER machine learning model might detect the word “super.AI” in a text and classify it as a “Company”.
     </div>
-    <div class="alert alert-info alert-dismissible fade show" role="alert">
+    <div class="alert alert-success show text-center" role="alert">
         Your <strong>RESULT</strong> is ready.
     </div>
     <div>
         {{content|safe}}
     </div>   
+    <br>
     <div class="text-center"> 
         <a class="btn btn-primary" role="button" href="{% url 'home' %}">Again</a>
     </div>
