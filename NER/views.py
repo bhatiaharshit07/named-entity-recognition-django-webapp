@@ -1,18 +1,22 @@
+from django.http.response import HttpResponse
 from django.shortcuts import render
 import spacy
+from spacy import displacy
 # Create your views here.
 def home(request):
     return render(request, "home.html")
 
 def result(request):
-    ans = request.GET['input_text']
-    ans2 = request.GET['input_text2']
 
-    nlp = spacy.load("en_core_web_sm")
-    text1 = nlp(ans2)
+    input_sentence = request.GET['input_text']
+
+    nlp = spacy.load("en_core_web_trf")
+    text = nlp(input_sentence)
     nerList = []
-    for word in text1.ents:
+    for word in text.ents:
         print(word.text,word.label_)
-        nerList.append([word.text])
-    HELL = [[10,11],12]
-    return render(request, "result.html", {'ans':ans, 'ans2':text1.ents})
+        nerList.append([word.text,word.label_])
+    html = displacy.render([text], style="ent", page=True)
+    return HttpResponse(html[308:-7])
+    #return render(request, "result.html", {'ans':text, 'ans2':nerList, 'content':html})
+    #return HttpResponse("<h1>hello</h1>")

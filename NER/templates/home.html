@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     
-    <!--<link rel="stylesheet" href="{% static 'home.css' %}">-->
+    <link rel="stylesheet" href="{% static 'home.css' %}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +14,7 @@
     {% csrf_token %}
     <br>
     <form action="{% url 'result' %}" id="usrform">
-        <input type="text" height="500" width="500" name="input_text" id="input_text" required placeholder="Enter the text here..."> 
-        <br>
-        <textarea name="input_text2" rows="4" cols="50" id="input_text2"></textarea>
+        <textarea name="input_text" rows="10" cols="100" id="input_text" placeholder="Enter the text here..."></textarea>
         <br>
         <input type="submit">
         
