@@ -10,7 +10,7 @@ def result(request):
 
     input_sentence = request.GET['input_text']
 
-    nlp = spacy.load("en_core_web_md")
+    nlp = spacy.load("en_core_web_sm")
     text = nlp(input_sentence)
     nerList = []
     for word in text.ents:
