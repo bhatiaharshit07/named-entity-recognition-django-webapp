@@ -17,6 +17,6 @@ def result(request):
         print(word.text,word.label_)
         nerList.append([word.text,word.label_])
     html = displacy.render([text], style="ent", page=True)
-    return HttpResponse(html[308:-7])
-    #return render(request, "result.html", {'ans':text, 'ans2':nerList, 'content':html})
-    #return HttpResponse("<h1>hello</h1>")
+    #return HttpResponse(html[308:-7])
+    return render(request, "result.html", {'ans':text, 'ans2':nerList, 'content':html[344:-25]})
+    
