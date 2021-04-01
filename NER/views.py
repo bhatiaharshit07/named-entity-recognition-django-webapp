@@ -10,7 +10,7 @@ def result(request):
 
     input_sentence = request.GET['input_text']
 
-    nlp = spacy.load("en_core_web_trf")
+    nlp = spacy.load("en_core_web_md")
     text = nlp(input_sentence)
     html = displacy.render([text], style="ent")
     #return HttpResponse(html[308:-7])
