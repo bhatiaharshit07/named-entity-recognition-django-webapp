@@ -45,3 +45,4 @@ urllib3==1.26.4
 wasabi==0.8.2
 wcwidth==0.2.5
 whitenoise==5.2.0
+en-core-web-md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.0.0/en_core_web_md-3.0.0-py3-none-any.whl
