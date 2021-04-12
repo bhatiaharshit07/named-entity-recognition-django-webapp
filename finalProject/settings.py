@@ -29,7 +29,7 @@ DEBUG = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 #ALLOWED_HOSTS = ['majorproject-423.herokuapp.com','127.0.0.1']
-ALLOWED_HOSTS = ['majorproject-423.herokuapp.com']
+ALLOWED_HOSTS = ['majorproject-423.herokuapp.com','127.0.0.1']
 
 
 # Application definition
