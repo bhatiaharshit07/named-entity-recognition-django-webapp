@@ -12,7 +12,7 @@
 </head>
 <body>
    
-    {% csrf_token %}
+    
     <div class="text-center">
         <h1>Major Project</h1>
         <h1>Named Entity Recognition</h1>
@@ -22,10 +22,10 @@
         <strong>Named entity recognition (NER)</strong> is the task of identifying and categorizing key information (entities) in a text. An entity can be any word or series of words that consistently refers to the same thing. Every detected entity is classified into a predetermined category.
     </div>
     <div class="alert alert-info alert-dismissible fade show" role="alert">
-        A <strong>Named Entity Recognizer</strong> is a model that is able to identify named entities like “Apple”, “U.K.” and “$1 billion” in the sentence "Apple is looking at buying U.K. startup for $1 billion“.
+        A <strong>Named Entity Recognizer</strong> is a model that is able to identify named entities like 'Apple', 'U.K.' and '$1 billion' in the sentence "Apple is looking at buying U.K. startup for $1 billion“.
       </div>
-    <form action="{% url 'result' %}" id="usrform">
-        
+    <form action="{% url 'result' %}" method="post" id="usrform">
+        {% csrf_token %}
         <div class="input-group">
             <textarea class="form-control" rows ="4" name="input_text" placeholder="Enter the text here..." required aria-label="With textarea"></textarea>
         </div>
