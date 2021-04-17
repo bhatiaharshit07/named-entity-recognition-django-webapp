@@ -12,8 +12,12 @@ def result(request):
 
     nlp = spacy.load("en_core_web_md")
     text = nlp(input_sentence)
-    html = displacy.render([text], style="ent")
+    
+    ent_list = request.POST.getlist('check')
+    if len(ent_list) == 0:
+        option = {"ents":None}
+    else:    
+        option = {"ents":ent_list}
 
-    #return HttpResponse(html[308:-7])
-    #return render(request, "result.html", {'ans':text, 'ans2':nerList, 'content':html[344:-25]})
+    html = displacy.render([text], style="ent", options=option)
     return render(request, "result.html", {'content':html})
