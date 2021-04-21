@@ -23,44 +23,57 @@
     </div>
     <div class="alert alert-info alert-dismissible fade show" role="alert">
         A <strong>Named Entity Recognizer</strong> is a model that is able to identify named entities like 'Apple', 'U.K.' and '$1 billion' in the sentence "Apple is looking at buying U.K. startup for $1 billion“.
-      </div>
+    </div>
+
     <form action="{% url 'result' %}" method="post" id="usrform">
         {% csrf_token %}
         <div class="input-group">
             <textarea class="form-control" rows ="4" name="input_text" placeholder="Enter the text here..." required aria-label="With textarea"></textarea>
         </div>
         <br>
-        <div class="text-center">
-            <input class="form-check-input" type="checkbox" value="CARDINAL" id="CARDINAL", name="check">
-            <label class="form-check-label" for="CARDINAL">CARDINAL &ensp;</label>
-
-        
-            <input class="form-check-input" type="checkbox" value="MONEY" id="MONEY", name="check">
-            <label class="form-check-label" for="MONEY">MONEY &ensp;</label>
-       
-        
-            <input class="form-check-input" type="checkbox" value="ORG" id="ORG", name="check">
-            <label class="form-check-label" for="ORG">ORG &ensp;</label>
-
-            <input class="form-check-input" type="checkbox" value="DATE" id="DATE", name="check">
-            <label class="form-check-label" for="DATE">DATE &ensp;</label>
-
-            <input class="form-check-input" type="checkbox" value="PRODUCT" id="PRODUCT", name="check">
-            <label class="form-check-label" for="PRODUCT">PRODUCT &ensp;</label>
-
-            <input class="form-check-input" type="checkbox" value="GPE" id="GPE", name="check">
-            <label class="form-check-label" for="GPE">GPE &ensp;</label>
-
-            <input class="form-check-input" type="checkbox" value="PERSON" id="PERSON", name="check">
-            <label class="form-check-label" for="PERSON">PERSON &ensp;</label>
-
-            <input class="form-check-input" type="checkbox" value="QUANTITY" id="QUANTITY", name="check">
-            <label class="form-check-label" for="QUANTITY">QUANTITY &ensp;</label>
-            <br><br>
+        <div class="">
+            <div class="">
+                <li>
+                <input class="form-check-input" type="checkbox" value="CARDINAL" id="CARDINAL", name="check">
+                <label class="form-check-label" for="CARDINAL">CARDINAL &ensp;</label>
+                </li>
+                <li>
+                <input class="form-check-input" type="checkbox" value="MONEY" id="MONEY", name="check">
+                <label class="form-check-label" for="MONEY">MONEY &ensp;</label>
+                </li>
+                <li>
+                <input class="form-check-input" type="checkbox" value="ORG" id="ORG", name="check">
+                <label class="form-check-label" for="ORG">ORG &ensp;</label>
+                </li>
+                <li>
+                <input class="form-check-input" type="checkbox" value="DATE" id="DATE", name="check">
+                <label class="form-check-label" for="DATE">DATE &ensp;</label>
+                </li>
+            </div>
+            <div class="">
+                <li>
+                <input class="form-check-input" type="checkbox" value="PRODUCT" id="PRODUCT", name="check">
+                <label class="form-check-label" for="PRODUCT">PRODUCT &ensp;</label>
+                </li>
+                <li>
+                <input class="form-check-input" type="checkbox" value="GPE" id="GPE", name="check">
+                <label class="form-check-label" for="GPE">GPE &ensp;</label>
+                </li>
+                <li>
+                <input class="form-check-input" type="checkbox" value="PERSON" id="PERSON", name="check">
+                <label class="form-check-label" for="PERSON">PERSON &ensp;</label>
+                </li>
+                <li>
+                <input class="form-check-input" type="checkbox" value="QUANTITY" id="QUANTITY", name="check">
+                <label class="form-check-label" for="QUANTITY">QUANTITY &ensp;</label>
+                </li>   
+            </div>
         </div>
+        
         <div class="text-center">
             <button type="submit" class="btn btn-success" >Submit</button> 
-        </div>   
+        </div>  
+
     </form>
 </body>
 </html>
