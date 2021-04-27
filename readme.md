@@ -1,1 +1,4 @@
-Major Project on Named Entity Recognition hosted on Heroku .
+Major Project
+Named Entity Recognition 
+Hosted on Heroku
+Backend Django
